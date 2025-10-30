@@ -1,4 +1,4 @@
-<h1 align="center">✨ Sagittarius CLI 🚀</h1>
+<h1 align="center">✨ SagittarIO CLI 🚀</h1>
 <p align="center">
 	<img src="https://img.shields.io/badge/CLI-Node.js-green?logo=node.js" alt="Node.js CLI"/>
 	<img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License"/>
