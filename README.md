@@ -1,8 +1,10 @@
-<h1 align="center">✨ SagittarIO CLI 🚀</h1>
+<h1 align="center">✨ Sagittario CLI 🚀</h1>
 <p align="center">
 	<img src="https://img.shields.io/badge/CLI-Node.js-green?logo=node.js" alt="Node.js CLI"/>
 	<img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="MIT License"/>
 </p>
+
+<img width="1024" height="1024" alt="ChatGPT Image Nov 9, 2025, 10_36_55 PM" src="https://github.com/user-attachments/assets/beba3dca-02ac-412a-8087-b0367fa5037f" />
 
 
 ---
@@ -55,7 +57,7 @@ sag login -t <your_token>
 ```
 
 
-🔗 Get your token at: [Sagittarius Profile](https://sagittair.io/profile)
+🔗 Get your token at: [Sagittarius Profile](https://sagittario.app/profile)
 
 
 👀 Check your account info:
@@ -116,12 +118,20 @@ sag apps create --file=$(pwd)/app.yml
 
 This will create your app, while the deployment will take depending on the build and startup time of your app.
 
-### 📋 List Applications
+
+### 📋 List Applications and get applications
+
 
 🔎 Show all your applications:
 
 ```bash
 sag apps list
+```
+
+🔎 Show all your applications in JSON format:
+
+```bash
+sag apps list --json
 ```
 
 
@@ -149,6 +159,17 @@ sag restart --id=<app_id>
 
 ### 📺 Applications Logs
 
+👨🏻‍💻 To see your application Docker image build results, run the following command:
+
+```bash
+sag apps build --id=<app_id>
+```
+
+👨🏻‍💻 To see your application runtime logs, run the following command:
+
+```bash
+sag apps logs --id=<app_id>
+```
 
 ### 🆘 Help
 
@@ -178,9 +199,32 @@ sag apps -h
 
 ## 🌐 Manage Networks
 
+
 🔗 List all networks:
 ```bash
 sag networks list
+```
+
+
+### 🌐 Create a Network
+
+You can create a network directly using option arguments:
+
+```bash
+sag networks create --description="Falling" --name="Falling name" --organization=1 --server=1
+```
+
+Or you can use it interactively by providing only:
+
+```bash
+sag networks create
+```
+
+---
+
+🔗 List all networks in JSON format:
+```bash
+sag networks list --json
 ```
 
 🔗 Get a specific network:
@@ -188,20 +232,44 @@ sag networks list
 sag networks get --id=<network_id>
 ```
 
+🔗 Get a specific network in JSON format:
+```bash
+sag networks get --id=<network_id> --json
+```
+
 
 ---
 
 ## 🏢 Manage Organizations
+
 
 👥 List organizations:
 ```bash
 sag organizations list
 ```
 
+👥 List organizations in JSON format:
+```bash
+sag organizations list --json
+```
+
 👁️‍🗨️ Get an organization:
 ```bash
 sag organizations get --id=<org-id>
 ```
+
+👁️‍🗨️ Get an organization in JSON format:
+```bash
+sag organizations get --id=<org-id> --json
+```
+
+---
+
+---
+
+## 📤 JSON Output
+
+You can add the <code>--json</code> flag to the <b>apps</b>, <b>networks</b>, and <b>organizations</b> commands to get the output in JSON format. This is useful for scripting, automation, or integrating with other tools.
 
 ---
 
